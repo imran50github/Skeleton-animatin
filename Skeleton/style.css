@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+.container{
+    height: 50vh;
+    background-color: #cff8f8;
+    box-shadow: 0 3px 6px #00000029, 0 3px 6px #0000003b;
+    width: 50vh;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.post{
+    width: 220px;
+    height: 80px;
+}
+.post .avatar{
+    float: left;
+    width: 52px;
+    height: 52px;
+    background-color: #ccc;
+    border-radius: 25%;
+    margin: 8px;
+    background-image: linear-gradient(90deg, #F4F4F4 0px, rgba(229, 229, 229, 0.8));
+    background-size: 600px;
+    animation: shine-avatar 2s infinite ease-out;
+}
+.post .line{
+    float: left;
+    width: 140px;
+    height: 16px;
+    margin-top: 12px;
+    border-radius: 7px;
+    background-image: linear-gradient(90deg, #F4F4F4 0px, rgba(229, 229, 229, 0.8));
+    background-size: 600px;
+    animation: shine-lines 2s infinite ease-out;
+}
+.post .avatar + .line{
+    margin-top: 11px;
+    width: 100px;
+}
+.post .avatar ~ .line{
+  background-color: #ddd;
+}
+
+/* animation */
+@keyframes shine-lines{
+    0%{
+        background-position: -100px;
+        background-color: #8f0808;
+    }
+    40%, 100%{
+        background-position: -140px;
+    }
+}
+@keyframes shine-avatar{
+    0%{
+        background-color:#8f0808;
+        background-position: -32px;
+    }
+    40%, 100%{
+        background-position: -140px;
+    }
+}
+
+
+
+
+
+
